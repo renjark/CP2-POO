@@ -1,5 +1,3 @@
-package br.com.fiapdelivery.model;
-
 public class Pacote {
 
     private String codigo;
@@ -13,26 +11,30 @@ public class Pacote {
     }
 
     public void atualizarStatus(String novoStatus) {
-        if (novoStatus == null || novoStatus.isEmpty()) {
+        if (novoStatus != null && !novoStatus.isEmpty()) {
+            this.status = novoStatus;
+        } else {
             System.out.println("Status inválido!");
-            return;
         }
-        this.status = novoStatus;
     }
 
     public String getCodigo() {
         return codigo;
     }
 
+    public double getPeso() {
+        return peso;
+    }
+
     public String getStatus() {
         return status;
     }
 
-	public double getPeso() {
-		return peso;
-	}
-
-	public void setPeso(double peso) {
-		this.peso = peso;
-	}
+    private void setPeso(double peso) {
+        if (peso > 0) {
+            this.peso = peso;
+        } else {
+            System.out.println("Peso inválido!");
+        }
+    }
 }
