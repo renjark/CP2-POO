@@ -1,3 +1,10 @@
+package br.com.fiapdelivery.main;
+
+import br.com.fiapdelivery.model.Caminhao;
+import br.com.fiapdelivery.model.Moto;
+import br.com.fiapdelivery.model.Pacote;
+import br.com.fiapdelivery.model.Rota;
+
 public class Principal {
 
     public static void main(String[] args) {
@@ -14,6 +21,6 @@ public class Principal {
         rota1.iniciarEntrega();
 
         Rota rota2 = new Rota(pacote2, moto);
-        rota2.iniciarEntrega(); 
+        rota2.iniciarEntrega();
     }
 }
