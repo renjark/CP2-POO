@@ -1,4 +1,6 @@
-public abstract class Veiculo {
+package br.com.fiapdelivery.model;
+
+public class Veiculo {
 
     private String placa;
     private double capacidade;
