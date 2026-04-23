@@ -1,3 +1,5 @@
+package br.com.fiapdelivery.model;
+
 public class Rota {
 
     private Pacote pacote;
@@ -13,7 +15,7 @@ public class Rota {
         System.out.println("\n--- INICIANDO ENTREGA ---");
 
         if (pacote.getPeso() > veiculo.getCapacidade()) {
-            System.out.println("ERRO: Veículo não suporta o peso do pacote!!");
+            System.out.println("ERRO: Veículo não suporta o peso do pacote!");
             return;
         }
 
@@ -30,7 +32,7 @@ public class Rota {
     private void finalizarEntrega() {
         pacote.atualizarStatus("Entregue");
 
-        System.out.println("Entrega finalizada!!");
+        System.out.println("Entrega finalizada!");
         System.out.println("Status final: " + pacote.getStatus());
     }
 }
